@@ -1,7 +1,7 @@
-package com.pickYourTable.userservices.loginService;
+package com.pickYourTable.userservices.loginservice;
 
-import com.pickYourTable.userservices.loginService.models.LoginServiceRequest;
-import com.pickYourTable.userservices.loginService.models.LoginServiceResponse;
+import com.pickYourTable.userservices.loginservice.models.LoginServiceRequest;
+import com.pickYourTable.userservices.loginservice.models.LoginServiceResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,5 +20,4 @@ public class LoginServiceController {
         loginServiceRequestValidator.validateRequest(request);
         return loginServiceImplementation.process(request);
     }
-
 }

@@ -1,4 +1,4 @@
-package com.pickYourTable.repositories.userRepository;
+package com.pickYourTable.repositories.userrepository;
 
 import lombok.*;
 
@@ -43,6 +43,12 @@ public class User {
 
     @Column(name = "LAST_LOGIN_DATE")
     private LocalDate lastLoginDate;
+
+    @Column(name = "IS_ACTIVE")
+    private Boolean isActive;
+
+    @Column(name = "VERIFICATION_CODE")
+    private String verificationCode;
 
 
 }

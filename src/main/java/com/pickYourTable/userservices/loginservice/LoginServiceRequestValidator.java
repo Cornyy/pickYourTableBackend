@@ -1,7 +1,7 @@
-package com.pickYourTable.userservices.loginService;
+package com.pickYourTable.userservices.loginservice;
 
 import com.pickYourTable.exceptions.ValidationException;
-import com.pickYourTable.userservices.loginService.models.LoginServiceRequest;
+import com.pickYourTable.userservices.loginservice.models.LoginServiceRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

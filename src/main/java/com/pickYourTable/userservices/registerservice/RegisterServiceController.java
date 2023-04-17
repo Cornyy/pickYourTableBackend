@@ -1,8 +1,7 @@
-package com.pickYourTable.userservices.registerService;
+package com.pickYourTable.userservices.registerservice;
 
-import com.pickYourTable.emailsender.EmailSenderService;
-import com.pickYourTable.userservices.registerService.models.RegisterServiceRequest;
-import com.pickYourTable.userservices.registerService.models.RegisterServiceResponse;
+import com.pickYourTable.userservices.registerservice.models.RegisterServiceRequest;
+import com.pickYourTable.userservices.registerservice.models.RegisterServiceResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegisterServiceController {
 
     private final RegisterServiceImplementation registerServiceImplementation;
-    private final EmailSenderService emailSenderService;
 
     @PostMapping("/user/registerNewUser")
     public RegisterServiceResponse RegisterNewUser(

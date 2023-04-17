@@ -1,11 +1,11 @@
-package com.pickYourTable.userservices.registerService;
+package com.pickYourTable.userservices.registerservice;
 
 import com.pickYourTable.emailsender.EmailSenderService;
 import com.pickYourTable.exceptions.ProcessingException;
-import com.pickYourTable.repositories.userRepository.User;
-import com.pickYourTable.repositories.userRepository.UserRepository;
-import com.pickYourTable.userservices.registerService.models.RegisterServiceRequest;
-import com.pickYourTable.userservices.registerService.models.RegisterServiceResponse;
+import com.pickYourTable.repositories.userrepository.User;
+import com.pickYourTable.repositories.userrepository.UserRepository;
+import com.pickYourTable.userservices.registerservice.models.RegisterServiceRequest;
+import com.pickYourTable.userservices.registerservice.models.RegisterServiceResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +29,8 @@ public class RegisterServiceImplementation {
         } else if (userEmail.isPresent()) {
             throw new ProcessingException("User with given email already exists!");
         } else {
+            String verificationCode = verificationCodeGenerator.generateCode();
+
             userRepository.save(User.builder()
                     .email(request.getEmail())
                     .login(request.getLogin())
@@ -39,10 +41,11 @@ public class RegisterServiceImplementation {
                     .dateOfBirth(request.getDateOfBirth())
                     .registerDate(actualDate)
                     .lastLoginDate(actualDate)
+                    .isActive(false)
+                    .verificationCode(verificationCode)
                     .build());
 
-           String verificationCode = verificationCodeGenerator.generateCode();
-           emailSender.sendEmailVerificationCode(verificationCode, request.getEmail());
+            emailSender.sendEmailVerificationCode(verificationCode, request.getEmail());
 
             return RegisterServiceResponse.builder()
                     .registerDate(actualDate.toString())
