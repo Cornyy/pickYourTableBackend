@@ -1,4 +1,4 @@
-package com.pickYourTable.userservices.registerService;
+package com.pickYourTable.userservices.registerservice;
 
 import org.springframework.stereotype.Service;
 
