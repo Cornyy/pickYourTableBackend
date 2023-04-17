@@ -1,4 +1,4 @@
-package com.pickYourTable.userServices.loginService.models;
+package com.pickYourTable.userservices.loginService.models;
 
 import lombok.Data;
 import io.swagger.annotations.ApiModelProperty;

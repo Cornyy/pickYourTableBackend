@@ -1,7 +1,7 @@
-package com.pickYourTable.userServices.loginService;
+package com.pickYourTable.userservices.loginService;
 
-import com.pickYourTable.userServices.loginService.models.LoginServiceRequest;
-import com.pickYourTable.userServices.loginService.models.LoginServiceResponse;
+import com.pickYourTable.userservices.loginService.models.LoginServiceRequest;
+import com.pickYourTable.userservices.loginService.models.LoginServiceResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

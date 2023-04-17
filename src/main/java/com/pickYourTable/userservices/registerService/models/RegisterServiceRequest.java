@@ -1,4 +1,4 @@
-package com.pickYourTable.userServices.registerService.models;
+package com.pickYourTable.userservices.registerService.models;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

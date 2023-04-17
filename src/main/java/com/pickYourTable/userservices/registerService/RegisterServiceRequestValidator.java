@@ -1,7 +1,7 @@
-package com.pickYourTable.userServices.registerService;
+package com.pickYourTable.userservices.registerService;
 
 import com.pickYourTable.exceptions.ValidationException;
-import com.pickYourTable.userServices.registerService.models.RegisterServiceRequest;
+import com.pickYourTable.userservices.registerService.models.RegisterServiceRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
