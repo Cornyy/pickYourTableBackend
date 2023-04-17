@@ -1,4 +1,4 @@
-package com.pickYourTable.userServices.registerService.models;
+package com.pickYourTable.userservices.loginService.models;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
@@ -6,11 +6,11 @@ import lombok.Data;
 
 @Data
 @Builder
-public class RegisterServiceResponse {
+public class LoginServiceResponse {
 
     @ApiModelProperty("Treść odpowiedzi")
     private String message;
 
-    @ApiModelProperty("Data rejestracji")
-    private String registerDate;
+    @ApiModelProperty("Data logowania")
+    private String loginDate;
 }

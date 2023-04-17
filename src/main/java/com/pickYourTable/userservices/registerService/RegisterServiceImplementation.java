@@ -1,10 +1,11 @@
-package com.pickYourTable.userServices.registerService;
+package com.pickYourTable.userservices.registerService;
 
+import com.pickYourTable.emailsender.EmailSenderService;
 import com.pickYourTable.exceptions.ProcessingException;
 import com.pickYourTable.repositories.userRepository.User;
 import com.pickYourTable.repositories.userRepository.UserRepository;
-import com.pickYourTable.userServices.registerService.models.RegisterServiceRequest;
-import com.pickYourTable.userServices.registerService.models.RegisterServiceResponse;
+import com.pickYourTable.userservices.registerService.models.RegisterServiceRequest;
+import com.pickYourTable.userservices.registerService.models.RegisterServiceResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,8 @@ import java.util.Optional;
 public class RegisterServiceImplementation {
 
     private final UserRepository userRepository;
+    private final VerificationCodeGenerator verificationCodeGenerator;
+    private final EmailSenderService emailSender;
 
     public RegisterServiceResponse process(RegisterServiceRequest request) {
         LocalDate actualDate = LocalDate.now();
@@ -37,10 +40,14 @@ public class RegisterServiceImplementation {
                     .registerDate(actualDate)
                     .lastLoginDate(actualDate)
                     .build());
+
+           String verificationCode = verificationCodeGenerator.generateCode();
+           emailSender.sendEmailVerificationCode(verificationCode, request.getEmail());
+
+            return RegisterServiceResponse.builder()
+                    .registerDate(actualDate.toString())
+                    .message("Registration successful!")
+                    .build();
         }
-        return RegisterServiceResponse.builder()
-                .registerDate(actualDate.toString())
-                .message("Registration successful!")
-                .build();
     }
 }

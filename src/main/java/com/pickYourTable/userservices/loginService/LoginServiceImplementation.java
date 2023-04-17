@@ -1,10 +1,10 @@
-package com.pickYourTable.userServices.loginService;
+package com.pickYourTable.userservices.loginService;
 
 import com.pickYourTable.exceptions.ProcessingException;
 import com.pickYourTable.repositories.userRepository.User;
 import com.pickYourTable.repositories.userRepository.UserRepository;
-import com.pickYourTable.userServices.loginService.models.LoginServiceRequest;
-import com.pickYourTable.userServices.loginService.models.LoginServiceResponse;
+import com.pickYourTable.userservices.loginService.models.LoginServiceRequest;
+import com.pickYourTable.userservices.loginService.models.LoginServiceResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

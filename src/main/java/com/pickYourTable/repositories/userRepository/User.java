@@ -1,14 +1,15 @@
 package com.pickYourTable.repositories.userRepository;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Data
 @Entity
 @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "USERS")
 public class User {
 
@@ -42,4 +43,6 @@ public class User {
 
     @Column(name = "LAST_LOGIN_DATE")
     private LocalDate lastLoginDate;
+
+
 }
