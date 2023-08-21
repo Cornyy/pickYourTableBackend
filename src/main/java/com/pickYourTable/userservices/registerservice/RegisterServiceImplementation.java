@@ -45,7 +45,7 @@ public class RegisterServiceImplementation {
                     .verificationCode(verificationCode)
                     .build());
 
-            emailSender.sendEmailVerificationCode(verificationCode, request.getEmail());
+            //emailSender.sendEmailVerificationCode(verificationCode, request.getEmail());
 
             return RegisterServiceResponse.builder()
                     .registerDate(actualDate.toString())
