@@ -1,4 +1,4 @@
-package com.pickYourTable.restaurantServices.createrestaurantservice.models;
+package com.pickYourTable.restaurantservices.createrestaurantservice.models;
 
 import com.pickYourTable.repositories.restaurantrepository.CousineTypeEnum;
 import io.swagger.annotations.ApiModelProperty;

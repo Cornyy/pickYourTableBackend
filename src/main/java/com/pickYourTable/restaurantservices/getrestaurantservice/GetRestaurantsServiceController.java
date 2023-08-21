@@ -1,7 +1,7 @@
-package com.pickYourTable.restaurantServices.getrestaurantservice;
+package com.pickYourTable.restaurantservices.getrestaurantservice;
 
-import com.pickYourTable.restaurantServices.getrestaurantservice.models.GetRestaurantsRequest;
-import com.pickYourTable.restaurantServices.getrestaurantservice.models.GetRestaurantsResponse;
+import com.pickYourTable.restaurantservices.getrestaurantservice.models.GetRestaurantsRequest;
+import com.pickYourTable.restaurantservices.getrestaurantservice.models.GetRestaurantsResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;

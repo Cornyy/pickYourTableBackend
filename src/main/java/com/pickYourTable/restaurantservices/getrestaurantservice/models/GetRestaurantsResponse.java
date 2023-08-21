@@ -1,4 +1,4 @@
-package com.pickYourTable.restaurantServices.getrestaurantservice.models;
+package com.pickYourTable.restaurantservices.getrestaurantservice.models;
 
 import com.pickYourTable.repositories.restaurantrepository.Restaurant;
 import io.swagger.annotations.ApiModelProperty;

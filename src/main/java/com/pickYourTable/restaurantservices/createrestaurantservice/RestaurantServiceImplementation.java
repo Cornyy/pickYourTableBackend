@@ -1,10 +1,10 @@
-package com.pickYourTable.restaurantServices.createrestaurantservice;
+package com.pickYourTable.restaurantservices.createrestaurantservice;
 
 import com.pickYourTable.exceptions.ProcessingException;
 import com.pickYourTable.repositories.restaurantrepository.Restaurant;
 import com.pickYourTable.repositories.restaurantrepository.RestaurantRepository;
-import com.pickYourTable.restaurantServices.createrestaurantservice.models.RestaurantServiceRequest;
-import com.pickYourTable.restaurantServices.createrestaurantservice.models.RestaurantServiceResponse;
+import com.pickYourTable.restaurantservices.createrestaurantservice.models.RestaurantServiceRequest;
+import com.pickYourTable.restaurantservices.createrestaurantservice.models.RestaurantServiceResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

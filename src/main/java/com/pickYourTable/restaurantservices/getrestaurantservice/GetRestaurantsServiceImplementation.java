@@ -1,8 +1,8 @@
-package com.pickYourTable.restaurantServices.getrestaurantservice;
+package com.pickYourTable.restaurantservices.getrestaurantservice;
 
 import com.pickYourTable.repositories.restaurantrepository.Restaurant;
 import com.pickYourTable.repositories.restaurantrepository.RestaurantRepository;
-import com.pickYourTable.restaurantServices.getrestaurantservice.models.GetRestaurantsResponse;
+import com.pickYourTable.restaurantservices.getrestaurantservice.models.GetRestaurantsResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class GetRestaurantsServiceImplementation {
 
     public GetRestaurantsResponse process(String city) {
 
-        List<Restaurant> list = new ArrayList<>();
+        List<Restaurant> list;
 
         if (city == null) {
           list = (List<Restaurant>) restaurantRepository.findAll();
