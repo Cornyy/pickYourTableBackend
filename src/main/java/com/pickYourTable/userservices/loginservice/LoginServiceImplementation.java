@@ -37,5 +37,7 @@ public class LoginServiceImplementation {
                 throw new ProcessingException("Wrong password!");
             }
         }
+        //todo DODAĆ EXCEPTION DO POWYŻSZYCH - ŻEBY NIE RZUCAĆ KODU 500.
+        //todo ZACZĄĆ OD SEKCJI RESERVATIONSERVICES
     }
 }

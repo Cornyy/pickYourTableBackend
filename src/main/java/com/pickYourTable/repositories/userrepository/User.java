@@ -50,5 +50,4 @@ public class User {
     @Column(name = "VERIFICATION_CODE")
     private String verificationCode;
 
-
 }
