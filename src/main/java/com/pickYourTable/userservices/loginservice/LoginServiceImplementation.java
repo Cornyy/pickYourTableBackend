@@ -21,7 +21,7 @@ public class LoginServiceImplementation {
         Optional<User> userOptional = userRepository.findByLogin(request.getLogin());
 
         if (userOptional.isEmpty()) {
-            throw new ProcessingException("User with given login not exists!");
+            throw new ProcessingException("User with given login not exists!!");
         } else {
             User user = userOptional.get();
             if (user.getPassword().equals(request.getPassword())) {
@@ -37,5 +37,7 @@ public class LoginServiceImplementation {
                 throw new ProcessingException("Wrong password!");
             }
         }
+        //todo DODAĆ EXCEPTION DO POWYŻSZYCH - ŻEBY NIE RZUCAĆ KODU 500.
+        //todo ZACZĄĆ OD SEKCJI RESERVATIONSERVICES
     }
 }
